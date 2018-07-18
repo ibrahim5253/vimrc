@@ -26,6 +26,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this lineet number
 
 set number
+syntax on 
+set cindent
+set shiftwidth=4
+set expandtab
+set tabstop=4
+"set tabstop 8
 
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
@@ -38,3 +44,8 @@ set splitright
 noremap <F4> :set hlsearch! hlsearch?<CR>
 nnoremap <CR> :nohlsearch<CR><CR>
 inoremap <C-D> <Esc>:call setline(".",substitute(getline(line(".")),'^\s*',matchstr(getline(line(".")-1),'^\s*'),''))<CR>I
+noremap <Enter> o<ESC>
+noremap <S-CR> O<ESC>
+
+set backspace=indent,eol,start
+"set clipboard=unnamed
